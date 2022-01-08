@@ -17,6 +17,8 @@ Sentry.init({
     tracesSampleRate: 1.0,
 });
 
+Sentry.setTag("app_name", process.env.SENTRY_APP_NAME);
+
 const task = cron.schedule("*/5 * * * *", async () => {
     // Initialize provider
     const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
