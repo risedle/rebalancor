@@ -30,10 +30,14 @@ Run the program:
 
 This bot is deployed to [fly.io](https://fly.io/docs/introduction/).
 
-Set the secret:
+Create new app:
 
-    flyctl secrets set RPC_URL= VAULT_CONTRACT= LEVERAGED_TOKEN_CONTRACT= MIN_LEVERAGE_RATIO_IN_ETHER= MAX_LEVERAGE_RATIO_IN_ETHER= WALLET_PRIVATE_KEY= SENTRY_DSN=
+    flyctl launch
+
+Set the secrets:
+
+    flyctl secrets --app kovan-rebalance-ethrise set RPC_URL="here" WALLET_PRIVATE_KEY="here" SENTRY_DSN="here"
 
 Run the following command to deploy:
 
-    flyctl deploy
+    flyctl deploy --app kovan-rebalance-ethrise --config kovan-ethrise.toml .
