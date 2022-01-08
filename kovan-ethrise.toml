@@ -1,0 +1,14 @@
+# fly.toml file generated for arbitrage-kovan-weth-usdc on 2021-11-04T12:32:51+07:00
+
+app = "kovan-rebalance-ethrise"
+
+kill_signal = "SIGTERM"
+kill_timeout = 5
+processes = []
+
+[env]
+  VAULT_CONTRACT="0x4fEaae24eB6d4dBEF520A6847a6f0b1411751521"
+  LEVERAGED_TOKEN_CONTRACT="0x54627Fa3B07DE118c047c05c9c8A5a3462ac4138"
+  MIN_LEVERAGE_RATIO_IN_ETHER=1700000000000000000
+  MAX_LEVERAGE_RATIO_IN_ETHER=2500000000000000000
+  SENTRY_APP_NAME="kovan-rebalance-ethrise"
